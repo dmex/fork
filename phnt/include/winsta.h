@@ -944,17 +944,17 @@ WinStationEnumerateW(
 /**
  * The WinStationQueryInformationW routine retrieves information about a window station.
  *
- * @param ServerHandle A handle to an RD Session Host server. Specify a handle opened by the WinStationOpenServerW function, or specify WINSTATION_CURRENT_SERVER to indicate the server on which your application is running.
- * @param SessionId A Remote Desktop Services session identifier.
+ * \param ServerHandle A handle to an RD Session Host server. Specify a handle opened by the WinStationOpenServerW function, or specify WINSTATION_CURRENT_SERVER to indicate the server on which your application is running.
+ * \param SessionId A Remote Desktop Services session identifier.
  * To indicate the session in which the calling application is running (or the current session) specify WINSTATION_CURRENT_SESSION.
  * Only specify WINSTATION_CURRENT_SESSION when obtaining session information on the local server.
  * If WINSTATION_CURRENT_SESSION is specified when querying session information on a remote server, the returned session information will be inconsistent. Do not use the returned data.
- * @param WinStationInformationClass A value from the TOKEN_INFORMATION_CLASS enumerated type identifying the type of information to be retrieved.
- * @param WinStationInformation Pointer to a caller-allocated buffer that receives the requested information about the token.
- * @param WinStationInformationLength Length, in bytes, of the caller-allocated TokenInformation buffer.
- * @param ReturnLength Pointer to a caller-allocated variable that receives the actual length, in bytes, of the information returned in the TokenInformation buffer.
- * @return NTSTATUS Successful or errant status.
- * @sa https://learn.microsoft.com/en-us/windows-hardware/drivers/ddi/ntifs/nf-ntifs-ntqueryinformationtoken
+ * \param WinStationInformationClass A value from the TOKEN_INFORMATION_CLASS enumerated type identifying the type of information to be retrieved.
+ * \param WinStationInformation Pointer to a caller-allocated buffer that receives the requested information about the token.
+ * \param WinStationInformationLength Length, in bytes, of the caller-allocated TokenInformation buffer.
+ * \param ReturnLength Pointer to a caller-allocated variable that receives the actual length, in bytes, of the information returned in the TokenInformation buffer.
+ * \return NTSTATUS Successful or errant status.
+ * \sa https://learn.microsoft.com/en-us/windows-hardware/drivers/ddi/ntifs/nf-ntifs-ntqueryinformationtoken
  */
 NTSYSAPI
 BOOLEAN
